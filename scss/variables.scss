@@ -1,0 +1,54 @@
+@import 'mixins';
+
+/*DEFAULT BACKGROUND COLORS*/
+$bg-primary: #002E6E;
+$bg-secondary: #EF6C00;
+$bg-light: #F5F5F5;
+
+$color-highlight:#418AFF;
+
+
+
+$bg-primary-dark: darken($bg-primary, 5%);
+$bg-primary-light: lighten($bg-primary,10%);
+$bg-primary-muted: #FFE6D9;
+
+$bg-gray-light: #D2D4D6;
+$bg-gray: #C6C6C6;
+$bg-muted: #EBEBEB;
+
+
+// COLORS
+$color-default: #4E5358;
+$color-dark: #172B4D;
+$color-gray:#606060;
+$color-success: #9CDEA9;
+$color-error: #bd2929;
+
+
+// STATUS
+$status-enviado:#F5B16C;
+$status-comite:#3FBCBC;
+$status-serasa:#D0D9EA;
+$status-parecer:#87ABE2;
+$status-sinistro:#A680C6;
+$status-comercial:#B55E73;
+$status-reanalise:#F88756;
+
+.color-primary {color: $bg-primary;}
+.color-highlight {color:$color-highlight;}
+.ico-success {color: #4fbc5d;}
+
+// SIZES
+$header-size:82px;
+$nav-size:230px;
+$nav-maxSize:230px;
+.small{@include fontSize(11)}
+
+// FONT-WEIGHT
+.light {font-weight: 300;}
+.normal {font-weight: 400;}
+.medium {font-weight: 500;}
+.bold {font-weight: 700;}
+
+.pointer{cursor: pointer;}

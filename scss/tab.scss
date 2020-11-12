@@ -1,0 +1,115 @@
+.nav-tabs{
+    border:0 none;
+    .nav-item{
+        margin-right: 30px;
+        a{
+            @include fontSize(13);
+            color: $color-default;
+            font-weight: 500;
+            padding: 20px 8px;
+            border-bottom:2px solid transparent;
+            display: block;
+            text-transform: uppercase;
+            &:hover{
+                color:$bg-primary;
+                text-decoration: none;
+            }
+            &.active{
+                color:$bg-primary;
+                border-bottom-color:$bg-primary;
+            }
+        }
+    }
+    &.mobileActive{
+        display: none;
+    }
+
+    &.internas {
+        a {
+            color: $color-default;
+            background: #FFF;
+            border-radius:17px;
+            @include fontSize(12);
+            font-weight: 300;
+            padding: 5px 22px; 
+            
+            &.active{
+                color: #FFF;
+                background: $bg-primary;
+            }
+        }
+    }
+}
+
+.tab-content{
+    @include fontSize(15);
+    .form-control{
+        @include fontSize(14);
+    }
+    >.tab-mobile{
+        display: none;
+        justify-content: space-between;
+        border: 1px solid $bg-muted;
+        background: #FFF;
+        padding: 5px 15px;
+        cursor: pointer;
+        align-items: center;
+        @include addEase();
+        &.active{
+            color:$bg-primary;
+            i{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &.mobileActive{
+        >.tab-mobile{
+            display: flex;
+        }
+        .card.card-default{
+            border:1px solid $bg-muted;
+            box-shadow: 0 0 0 0 transparent;
+            border-radius: 0;
+            border-top-width: 0;
+            border-bottom-width: 0;
+        }
+    }
+}
+.containerVertical {
+    a {
+        color: $color-dark;
+        text-decoration: none;
+
+        &:hover{    
+            
+            text-decoration: none;
+        }
+    }
+    .navVertical {
+        a {
+            @include fontSize(13);
+            color: $color-dark;
+            font-weight: 500;
+            padding: 20px 8px;
+            border-bottom:2px solid transparent;
+            display: block;
+            text-transform: uppercase;
+            background: #F1F1F3;
+            &:hover{
+                color:$bg-primary;
+                text-decoration: none;
+            }
+            &.active{
+                color:$bg-primary;
+                background: #FFF;
+                border-bottom-color:$bg-primary;
+            }
+        }
+    }
+}
+
+#conteudoNavDadosCadastrais {
+    .table-responsive {
+        padding-bottom: 0;
+    }
+}

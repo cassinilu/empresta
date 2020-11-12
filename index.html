@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dashboard - Subscrição</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css">
+            <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+            <link rel="stylesheet" href="css/global.min.css">
+            <link rel="stylesheet" href="css/parecer_tab-historico.css">
+        </head>
+        <body>
+            <div id="container-main">
+                <!-- NAVEGAÇÃO PRINCIPAL -->
+                <nav id="mainNav" class="">
+                    <!-- TITLE -->
+                    <h1 class="mb-0">
+                    <div class="px-3 h-100 toggleMobile d-flex align-items-center justify-content-between">
+                        <span class="toggleNav mx-auto">
+                            Sistema de Vendas
+                        </span>
+                        <div class="d-md-none">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                    </h1>
+                    <!-- NAVEGAÇÃO -->
+                    <div class="container-nav">
+                        <ul class="nav">
+                            <li class="header-mobile">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h2 class="h5">Sistema de Vendas</h2>
+                                    <span class="toggleMobile">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                </div>
+                                <div class="nav-mobile mt-4">
+                                    <div class="user-info">
+                                        <i class="fas fa-user mr-2"></i>
+                                        <span>Nome do usuário</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-home"></i>
+                                    <span class="text">Início</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span class="text">Vendas</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- CONTEUDO PRINCIPAL -->
+                <main>
+                    <!-- CABEÇALHO -->
+                    <div class="container-fluid mx-5">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <!-- TÍTULO -->
+                            <div class="mx-auto mx-md-0">
+                                <h1 class="mb-0">
+                                <a href="#" title="logo">
+                                    <img class="" src="img/logo_empresta.png" alt="logo do site">
+                                </a>
+                                </h1>
+                            </div>
+                            
+                            <!-- USUÁRIO -->
+                            <div class="d-none d-md-flex align-items-center container-user">
+                                <div class="user-name">Nome usuário</div>
+                                <i class="fas fa-user mr-5"></i>
+                                <a href="#" class="mr-2">Sair</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- CONTEUDO PRINCIPAL -->
+                    <div>
+                        <div class="container-title mx-md-5 pb-0">
+                            <div class="row">
+                                <!-- CONTATO -->
+                                <div class="col-12 col-md-4">
+                                    <form action="#">
+                                        <div class="card card-default mb-3">
+                                            <div class="card-body">
+                                                <h2 class="h6">Contato</h2>
+                                                <div class="row align-items-end">
+                                                    <div class="col-12 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="email">Email *:</label>
+                                                            <input id="email" name="email" type="text" class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="phone">Telefone *:</label>
+                                                            <input id="phone" name="phone" type="text" class="form-control" placeholder="(00) - (0000 - 0000)">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="celphone">Celular *:</label>
+                                                            <input id="celphone" name="celphone" type="text" class="form-control" placeholder="(00) - (00000 - 0000)">
+                                                        </div>
+                                                        <div class="form-group mb-4">
+                                                            <label for="">Reagendar:</label>
+                                                            <input id="" name="" class="sr-only">
+                                                            <label for="active_1" class="switch">
+                                                                <input id="active_1" name="active_1" type="checkbox" >
+                                                                <span class="slider round"></span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="register">Registro de Tentativas *:</label>
+                                                            <input id="register" name="register" type="text" class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="obs">Observações :</label>
+                                                            <textarea name="obs" id="obs" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- INFORMAÇÕES PESSOAIS -->
+                                <div class="col-12 col-md-8">
+                                    <form action="#">
+                                        <div class="card card-default mb-3">
+                                            <div class="card-body">
+                                                <h2 class="h6">Informações Pessoais</h2>
+                                                <div class="row align-items-end">
+                                                    <div class="col-12 col-md-8 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="name">Nome Completo *:</label>
+                                                            <input id="name" name="name" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-4 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="maritalStatus">Estado Civil *:</label>
+                                                            <input id="maritalStatus" name="maritalStatus" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="profession">Profissão *:</label>
+                                                            <input id="profession" name="profession" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="motherName">Nome da Mãe *:</label>
+                                                            <input id="motherName" name="motherName" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="dateOfBirth">Data de Nascimento *:</label>
+                                                            <input id="dateOfBirth" name="dateOfBirth" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="cpf">CPF *:</label>
+                                                            <input id="cpf" name="cpf" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-4 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="rg">RG *:</label>
+                                                            <input id="rg" name="rg" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-4 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="uf">UF *:</label>
+                                                            <input id="uf" name="uf" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-4 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="shippingDate">Data de Expedição *:</label>
+                                                            <input id="shippingDate" name="shippingDate" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-4 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="issuingBody">Orgão Emissor *:</label>
+                                                            <input id="issuingBody" name="issuingBody" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-4 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="photo">Foto RG (Frente e Verso) *:</label>
+                                                            <input id="photo" name="photo" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-4 mt-3">
+                                                        
+                                                    </div>
+                                                </div>
+                                                <h2 class="h6 mt-4">Endereço</h2>
+                                                <div class="row align-items-end">
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="cep">CEP *:</label>
+                                                            <input id="cep" name="cep" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-2 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="state">Estado *:</label>
+                                                            <input id="state" name="state" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-4 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="city">Cidade *:</label>
+                                                            <input id="city" name="city" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="neighborhood">Bairro *:</label>
+                                                            <input id="neighborhood" name="neighborhood" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="state">Rua *:</label>
+                                                            <input id="state" name="state" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="number">Número *:</label>
+                                                            <input id="number" name="number" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="complement">Complemento *:</label>
+                                                            <input id="complement" name="complement" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h2 class="h6 mt-4">Informações do Produto</h2>
+                                                <div class="row align-items-end">
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="bank">Banco *:</label>
+                                                            <input id="bank" name="bank" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="agency">Agência *:</label>
+                                                            <input id="agency" name="agency" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="agency">Número da Conta *:</label>
+                                                            <input id="agency" name="agency" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="product">Produto *:</label>
+                                                            <input id="product" name="product" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="covenants">Convênio *:</label>
+                                                            <input id="covenants" name="covenants" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="amountReleased">Valor Liberado *:</label>
+                                                            <input id="amountReleased" name="amountReleased" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="plotsNUmber">Número de Parcelas *:</label>
+                                                            <input id="plotsNUmber" name="plotsNUmber" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="plotsValue">Valor da Parcela *:</label>
+                                                            <input id="plotsValue" name="plotsValue" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        <div class="form-group">
+                                                            <label for="attachFiles">Anexar Arquivos *:</label>
+                                                            <input id="attachFiles" name="attachFiles" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-3 mt-3">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="float-right py-2">
+                                <button class="btn btn-secondary btn-border">
+                                <span>Salvar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <!-- SCRIPTS -->
+            <script src="js/script_config.js" data-script=""></script>
+        </body>
+    </html>

@@ -1,0 +1,61 @@
+// CARDS
+.card{
+   
+    @include addEase();
+    height: 100%;
+
+    &.card-default{
+        border: 2px solid #FFF;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+        h3{
+            margin-bottom: 0;
+            font-weight: 400;
+            @include fontSize(18);
+        }
+        .h4{
+            @include fontSize(16);
+        }
+        .card-header{
+            border-bottom:0;
+            background: transparent;
+            padding: 40px 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            @include sm-down{
+                >*{
+                    width: 100%;
+                    flex: 0 0 100%;
+                }
+            }
+        }
+        .card-body{
+            padding: 15px;
+        }
+        .title{
+            font-weight: 500;
+            @include fontSize(21);
+        }
+
+        &.card-link{
+            color: $color-gray;
+            &:hover{
+                border-color: $bg-primary;
+                .title{
+                    color: $bg-primary;
+                }
+            }
+        }
+    }
+
+    &.card-active{
+        background: #ffe1c2;
+        padding: 15px;
+        border-color:transparent;
+        border-radius: 15px;
+        box-shadow: 0px 3px 6px #2C28281C;
+    }
+
+
+}

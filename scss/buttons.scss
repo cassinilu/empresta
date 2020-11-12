@@ -1,0 +1,112 @@
+// BOTÕES
+.btn{
+    padding: 7.5px 20px; 
+    color: $color-gray;
+    border-color:transparent;
+    @include fontSize(14);
+    &.focus,
+    &:focus{
+        box-shadow: 0 0 0 transparent;
+    }
+
+    
+    &.btn-simple{
+        background: #ffffff;
+        padding: 5px 10px;
+        box-shadow: 0 0 0 0 transparent;
+        border-color:transparent;
+        svg{
+            width: 13px;
+            fill: $color-gray;
+            @include addEase();
+        }
+        &.open-filter{
+            border-color:$bg-primary;
+            svg{
+                fill: $bg-primary;
+            }
+            &:not(.disabled):hover{
+                background:$bg-primary;
+                svg{
+                    fill: #FFF;
+                }
+            }
+        }
+        
+    }
+    
+    &.btn-primary{
+        border-color:transparent;
+        background: $bg-primary;
+        color: #ffffff;
+        &:not(.disabled):active:focus,
+        &:not(.disabled):active,
+        &:not(.disabled):hover{
+            box-shadow: 0 0 0 0 transparent;
+            background: darken($bg-primary,5%);
+            border-color: $bg-primary;
+        }
+    }
+
+    &.btn-white{
+        border-color:$bg-gray-light;
+        background: #FFF;
+        color: $color-default;
+        &:not(.disabled):hover{
+            background: $bg-light;
+        }
+        &:hover:disabled {
+            background: transparent;
+        }
+    }
+
+    &.btn-secondary{
+        background: $bg-secondary;
+        color: $color-default;
+        border-color:transparent;
+        &:not(.disabled):hover{
+            background: darken($bg-secondary,5%);
+        }
+    }
+
+    &.btn-small{
+        border-radius:17px;
+        @include fontSize(12);
+        font-weight: 300;
+        padding: 5px 22px; 
+    }
+
+    &.btn-light{
+        border-color:$bg-gray-light;
+        background: #F7F7F7;
+        color: $color-default;
+        &:not(.disabled):hover{
+            background: $bg-muted;
+        }
+    }
+
+    @include sm-down{
+        &.btn-sm-block{
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+// BTN GROUP
+.btn-group-primary{
+    .btn{
+        @extend .btn-small;
+        color: $color-default;
+        background: $bg-secondary;
+        margin-bottom: 10px;
+        height: auto;
+        &.active{
+            background: $bg-primary;
+            color: #FFF;
+        }
+        @include sm-down{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+header{
+    height: $header-size;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+
+    .toggleMobile,
+    .toggleNav{
+        cursor: pointer;
+        color: $color-dark;
+    }
+
+    h1 {
+        img {
+            max-height: 60px;
+        }
+    }
+
+    .container-user{
+        @include fontSize(18);
+        color:$color-gray;
+        a{
+            color: $bg-primary;
+            font-weight: 300;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        .user-name{
+            margin-right: 10px;
+            border-left:1px solid $bg-gray-light;
+            padding-left: 15px;
+        }
+    }
+
+}

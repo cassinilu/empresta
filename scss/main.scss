@@ -1,0 +1,58 @@
+#container-main{
+    display: flex;
+    @include md-down{
+        flex-direction: column;
+    }
+}
+
+@include md-up{
+    #mainNav{
+       /* &.minSize{
+            & + main {
+                width: calc(100% - #{$nav-size});
+            }
+        }*/
+        & + main {
+            width: calc(100% - #{$nav-maxSize});
+        }
+    }
+}
+ 
+main{
+    @include addEase();
+    >div{
+        height: calc(100% - #{$header-size});
+        >div{
+            padding:30px 25px;
+            @include lg-down{
+                padding:15px 30px;
+            }
+            @include md-down{
+                padding:15px;
+            }
+        }
+
+        .main-body{
+            margin-top: 25px;
+            z-index: 0;
+            position: relative;
+        }
+        
+        h2{
+            font-weight: 500;
+            color: $color-gray;
+            @include fontSize(27);
+            &.title-internal{
+                @include fontSize(24);
+                color: #000000;
+                a{
+                    color: #000000;
+                }
+            }
+
+            &.h6 {
+                color: $color-highlight;
+            }
+        }
+    } 
+}  
